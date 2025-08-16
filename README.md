@@ -29,13 +29,17 @@ It allows Wi-Fi penetration testing and security research directly from an ESP32
 
 4. Connect your ESP32 and flash the above binaries at their respective offsets.
 
+<img width="843" height="749" alt="Screenshot 2025-08-16 181543" src="https://github.com/user-attachments/assets/ee89a69b-3773-418e-a193-4b9bb3829291" />
+
 ---
 
 ## 🖥️ Usage
 
-1. Once flashed, open the [ESP32 Web]() in your Chrome browser.
+1. Once flashed, open the [ESP32 Web](https://pranav-v-20.github.io/ESP32-Headless-Marauder/) in your Chrome browser.
 2. Interact with the ESP32 Marauder using available CLI commands.
 3. Preloaded Wi-Fi penetration commands are available.
+
+<img width="1155" height="828" alt="Screenshot 2025-08-16 174922" src="https://github.com/user-attachments/assets/77b136b4-61fd-4170-892a-a2ff4fe32772" />
 
 ---
 

@@ -43,6 +43,156 @@ It allows Wi-Fi penetration testing and security research directly from an ESP32
 
 ---
 
+## 🔧 System & Utility Commands
+
+* **`help`** – Displays all available commands with basic usage information.
+* **`reboot`** – Restarts the device.
+* **`update -s`** – Updates firmware from a server.
+* **`update -w`** – Updates firmware from a web/USB source.
+* **`ls <directory>`** – Lists files and directories at the specified path.
+* **`led -s`** – Toggles status LED on/off.
+* **`led -p`** – Puts LED in pulse mode.
+* **`info`** – Shows device/system information.
+* **`info -a`** – Shows extended device/system information.
+
+---
+
+## 📡 Wi-Fi Channel & Settings
+
+* **`channel -s`** – Selects and sets the Wi-Fi channel.
+* **`settings -s enable`** – Enables specific system settings.
+* **`settings -s disable`** – Disables specific system settings.
+* **`settings -r`** – Resets settings to default.
+
+---
+
+## 🧹 List & Data Management
+
+* **`clearlist -a`** – Clears all stored lists.
+* **`clearlist -c`** – Clears client list.
+* **`clearlist -s`** – Clears SSID list.
+* **`list -a`** – Displays all saved lists.
+* **`list -s`** – Shows saved SSID list.
+* **`list -c`** – Shows client list.
+* **`list -t`** – Shows target list.
+* **`list -i`** – Shows index list.
+* **`list -p`** – Shows packet logs.
+* **`select -a`** – Selects all items in a list.
+* **`select -s`** – Selects SSID(s).
+* **`select -c`** – Selects client(s).
+* **`select -f`** – Selects by filter (`equals` or `contains`).
+* **`save -a`** – Saves all configurations/lists.
+* **`save -s`** – Saves SSID list only.
+* **`load -a`** – Loads all saved configurations.
+* **`load -s`** – Loads SSID list only.
+
+---
+
+## 🌍 GPS & Location
+
+* **`gpsdata`** – Displays live GPS data.
+* **`gps -g`** – Shows GPS fix information.
+* **`gps ix`** – Index of GPS data.
+* **`gps sat`** – Number of satellites detected.
+* **`gps lon`** – Longitude.
+* **`gps lat`** – Latitude.
+* **`gps alt`** – Altitude.
+* **`gps date`** – Date and timestamp.
+* **`gps accuracy`** – Accuracy level of GPS fix.
+* **`gps text`** – Textual GPS information.
+* **`gps nmea`** – Raw NMEA data stream.
+* **`gps -n gps/glonass/galileo/navic/qzss/beidou`** – Selects satellite system.
+* **`gps -b`** – Switches Beidou usage between BD/GB.
+* **`nmea`** – Outputs raw NMEA sentences directly.
+
+---
+
+## 🛰️ Scanning & Recon
+
+* **`scanap`** – Scans for Wi-Fi access points.
+* **`scansta`** – Scans for connected stations (clients).
+* **`scanall`** – Scans both APs and clients.
+* **`stopscan`** – Stops ongoing scan.
+* **`stopscan -f`** – Forces scan stop.
+* **`pingscan`** – Sends ICMP pings to discover devices.
+* **`arpscan`** – Performs ARP-based discovery of devices.
+* **`arpscan -f`** – Forces ARP scan.
+* **`portscan -a -t <index>`** – Scans open ports of target.
+* **`sigmon`** – Monitors signal strength of detected networks.
+* **`packetcount`** – Shows number of captured packets.
+* **`wardrive`** – Starts war driving mode (logs APs while moving).
+* **`wardrive -s`** – War drive with GPS support.
+
+---
+
+## 🕵️ Packet Sniffing
+
+* **`sniffraw`** – Captures raw 802.11 packets.
+* **`sniffbeacon`** – Captures Wi-Fi beacon frames.
+* **`sniffprobe`** – Captures probe request frames.
+* **`sniffpwn`** – Captures and stores packets for replay/analysis.
+* **`sniffpinescan`** – Detects PineAP/Karma activity.
+* **`sniffmultissid`** – Detects multiple SSIDs in use.
+* **`sniffesp`** – Captures ESP-related packets.
+* **`sniffdeauth`** – Captures deauthentication frames.
+* **`sniffpmkid`** – Captures PMKID handshake for cracking.
+* **`sniffpmkid -c <channel>`** – Capture PMKID on a specific channel.
+* **`sniffpmkid -d`** – Save PMKID dump to file.
+* **`sniffpmkid -l`** – List captured PMKIDs.
+
+---
+
+## ⚔️ Attack Modes
+
+* **`attack -t -l`** – Launch attack (loop mode).
+* **`attack -t -r`** – Launch attack (random mode).
+* **`attack -t -a`** – Launch attack (all targets).
+* **`attack deauth`** – Sends deauthentication frames.
+* **`attack deauth -c`** – Deauth a specific channel.
+* **`attack deauth -s`** – Deauth a specific SSID.
+* **`attack probe`** – Sends fake probe requests.
+* **`attack rickroll`** – Starts Wi-Fi Rickroll prank.
+* **`attack badmsg`** – Sends malformed messages.
+* **`attack badmsg -c`** – Targeted bad message attack.
+* **`attack sleep`** – Sends packets to put devices into sleep mode.
+* **`attack sleep -c`** – Sleep attack on specific channel.
+
+---
+
+## 🎭 Evil Portal & Karma
+
+* **`evilportal -c start`** – Starts captive portal.
+* **`evilportal -c start -w <html.html>`** – Starts portal with custom HTML file.
+* **`evilportal sethtml`** – Updates portal HTML.
+* **`karma -p <example>`** – Karma attack (rogue AP mimicking real SSIDs).
+
+---
+
+## 📡 SSID Management
+
+* **`ssid -a`** – Add new SSID to the list.
+* **`ssid -a -g`** – Add SSID with group option.
+* **`ssid -a -n`** – Add SSID with name option.
+* **`ssid -r`** – Remove SSID.
+* **`join -a -p <password> -s <SSID>`** – Joins a network with given SSID and password.
+
+---
+
+## 🔵 Bluetooth / BLE
+
+* **`sniffbt`** – Sniffs nearby Bluetooth traffic.
+* **`sniffbt -t <target>`** – Sniffs a specific target.
+* **`blespam -t linux`** – Sends spam advertisements to Linux devices.
+* **`blespam -t windows`** – Sends spam advertisements to Windows devices.
+* **`blespam -t flipper`** – Sends spam ads to Flipper devices.
+* **`blespam -t all`** – Sends spam ads to all devices.
+* **`spoofat -t <target>`** – Spoofs Bluetooth address to impersonate target.
+* **`btwardrive`** – Bluetooth war driving mode.
+* **`btwardrive -c`** – War drive Bluetooth with GPS support.
+* **`sniffskim`** – Sniffs Bluetooth-based skimming devices.
+
+---
+
 ## 📖 Documentation
 
 * ESP32 Marauder Wiki → [Read Here](https://github.com/justcallmekoko/ESP32Marauder/wiki)

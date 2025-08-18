@@ -25,7 +25,7 @@ It allows Wi-Fi penetration testing and security research directly from an ESP32
    * **Partitions** → `0x8000` [Partitions](https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin)
    * **Boot App** → `0xE000` [Boot App](https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/FlipperZeroMultiBoardS3/boot_app0.bin)
 
-3. Open [ESP Web Flasher](https://espressif.github.io/esptool-js/) in **Chrome**.
+3. Open [ESP Web Flasher](https://esptool.spacehuhn.com/) in **Chrome**.
 
 4. Connect your ESP32 and flash the above binaries at their respective offsets.
 
